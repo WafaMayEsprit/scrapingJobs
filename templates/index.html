@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ method }} - Remote Job Listings</title> <!-- Updated title to include method -->
+</head>
+<body>
+<h1>{{ method }} - Remote Job Listings</h1> <!-- Updated header to include method -->
+<table border="1">
+<thead>
+<tr>
+<th>Title</th>
+<th>Company</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+{% for job in jobs %}
+<tr>
+<td>{{ job.Title }}</td>
+<td>{{ job.Company }}</td>
+<td>{{ job.Location }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+<p>Scraping completed in {{ spent_time|round(2) }} seconds.</p> <!-- Displaying spent time rounded to 2 decimal places -->
+</body>
+</html>
